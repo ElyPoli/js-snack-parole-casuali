@@ -20,9 +20,39 @@
 
     <!-- Axios.js -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Julius+Sans+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <main class="pt-5 mt-5">
+        <div class="container">
+            <h1 class="text-center fw-bold">Generate a sentence of random words</h1>
+
+            <!-- Form per indicare quante parole casuali generare -->
+            <div class="d-flex justify-content-center">
+                <div>
+                    <div class="mt-5 mb-3">
+                        <label for="words-to-generate" class="form-label fw-bold">How many words do you want to
+                            generate?</label>
+                        <input type="number" min="1" class="form-control" id="words-to-generate">
+                        
+                        <!-- Elemento per visualizzare il messaggio di errore -->
+                        <div id="error-form" class="d-none"></div>
+                    </div>
+                    <button class="btn btn-primary" id="btn-sentence">Create the sentence</button>
+                </div>
+            </div>
+
+            <!-- Risultato -->
+            <div id="random-generate" class="text-center pt-5">
+            </div>
+        </div>
+
+    </main>
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
